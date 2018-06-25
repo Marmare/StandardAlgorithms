@@ -1,6 +1,6 @@
 #pragma once
 
-#include "iterator_array.h"
+#include "iterator.h"
 
 #include <initializer_list>
 #include <exception>
@@ -20,7 +20,7 @@ namespace nstd {
 		T &operator[](size_t idx);
 		const T &operator[](size_t idx) const;
 
-		typedef iterator_array<T> iterator;
+		typedef nstd_prot::iterator<T, array<T, size>> iterator;
 
 		iterator begin();
 		const iterator begin() const;
